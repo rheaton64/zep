@@ -4,6 +4,7 @@ services:
     name: zep
     autoDeploy: false
     env: image
+    region: ohio
     image:
       url: ghcr.io/getzep/zep-cloud:latest
     healthCheckPath: /healthz
@@ -25,6 +26,7 @@ services:
     name: zep-nlp
     autoDeploy: false
     env: image
+    region: ohio
     image:
       url: ghcr.io/getzep/zep-nlp-server:latest
 
@@ -32,4 +34,5 @@ databases:
   - name: zep-postgres
     databaseName: zep
     postgresMajorVersion: 15
+    region: ohio
     ipAllowList: [] # only allow internal connections
